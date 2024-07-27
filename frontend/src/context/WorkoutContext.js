@@ -12,7 +12,7 @@ export const workoutsReducer = (state, action) => {
                 workouts: action.payload
             }
         //create, ...state.workouts is the preevious ones and payloads the new one
-        case 'CREATE_WORKOUTS':
+        case 'CREATE_WORKOUT':
             return{
                 workouts:[action.payload, ...state.workouts]
             }
@@ -36,8 +36,8 @@ export const WorkoutContextProvider = ({children}) => {
     return(
         //anything in this component has access to the context
         //anything in value is accessible to all components with context
-        <WorkoutContext.Provider value={{...state, dispatch}}>
+        <WorkoutsContext.Provider value={{...state, dispatch}}>
             {children}
-        </WorkoutContext.Provider>
+        </WorkoutsContext.Provider>
     )
 }
