@@ -6,12 +6,15 @@ import {
 } from "react-router-dom"
 
 import Navbar from "./components/Navbar"
-import ReactDOM from "react-dom/client";
 import Home from './pages/Home'
 
+import { ThemeContext } from './context/ThemeContext'
+import { useContext } from 'react'
+
 function App() {
+  const [theme] = useContext(ThemeContext);
   return (
-    <div className="App">
+    <div className={`App ${theme}`}>
       <Router>
         <Navbar/>
         <div className="pages">
@@ -20,7 +23,6 @@ function App() {
             path="/"
             element={<Home/>}
             >
-              
             </Route>
           </Routes>
         </div>

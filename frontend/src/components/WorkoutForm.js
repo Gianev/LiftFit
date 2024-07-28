@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
+import { ThemeContext } from '../context/ThemeContext'
+import { useContext } from 'react'
 
 const WorkoutForm = () => {
     const{dispatch} = useWorkoutsContext()
@@ -40,8 +42,11 @@ const WorkoutForm = () => {
         }
     }
 
+
+    const [theme] = useContext(ThemeContext);
+
     return(
-        <form className="create" onSubmit={handleSubmit}>
+        <form className={`create ${theme}`} onSubmit={handleSubmit}>
             <h3>Add Workout</h3>
 
             <label>Excersize Title: </label>
