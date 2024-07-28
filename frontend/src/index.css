@@ -11,6 +11,14 @@ body {
   font-family: "Poppins";
 }
 
+.bodylight {
+  background: #fff;
+}
+.bodydark{
+  
+  background: #1a1b1d;
+}
+
 /*black white controller*/
 .App{
   height: 100%;
@@ -58,7 +66,7 @@ header a {
   margin: 20px auto;
   padding: 20px;
   position: relative;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.05);
 }
 .workout-details h4 {
   margin: 0 0 10px 0;
