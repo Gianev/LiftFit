@@ -205,3 +205,13 @@ form.signup, form.login {
   background: #fff;
   border-radius: 4px;
 }
+
+.email-span-light{
+  margin: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.email-span-dark{
+  margin: 10px;
+  color: rgb(0, 0, 0);
+}
